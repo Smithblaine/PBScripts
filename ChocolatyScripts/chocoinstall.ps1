@@ -1,4 +1,4 @@
-﻿$Packages = 'firefox', 'googlechrome', 'office365proplus', 'adobereader', 'flashplayerplugin', 'jre8', 'javaruntime', 'zoom','notepadplusplus', 'slack', '7zip'
+﻿$Packages = 'firefox', 'googlechrome', 'adobereader', 'flashplayerplugin', 'jre8', 'javaruntime', 'zoom','notepadplusplus', 'slack', '7zip', 'unifying', 'office365proplus'
 
 Test-Path -Path "$env:ProgramData\Chocolatey"
 
