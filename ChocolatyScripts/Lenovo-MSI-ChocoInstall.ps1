@@ -41,8 +41,6 @@ switch ($choice) {
 
     #Non-Techinal script
     2 { 
-    
-
     Test-Path -Path "$env:ProgramData\Chocolatey"
     
     $ChocoInstalled = $false
