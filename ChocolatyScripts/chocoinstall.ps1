@@ -7,19 +7,19 @@ if (Get-Command choco.exe -ErrorAction SilentlyContinue) {
     $ChocoInstalled = $true
 }
 else {
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; 
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
 
 If(Test-Path -Path "$env:ProgramData\Chocolatey") {
-    ForEach ($PackageName in $Packages)
-{
-    choco install $PackageName -y
-}
+    ForEach ($PackageName in $Packages) {
+        choco install $PackageName -y
+    }
 }
 Else {
-    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-    ForEach ($PackageName in $Packages)
-{
-    choco install $PackageName -y
-}
+    Set-ExecutionPolicy Bypass -Scope Process -Force; 
+    Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    ForEach ($PackageName in $Packages) {
+        choco install $PackageName -y
+    }
 }
