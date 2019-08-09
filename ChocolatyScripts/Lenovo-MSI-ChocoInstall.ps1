@@ -1,5 +1,3 @@
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force;
-
 $TechnicalPrograms = 'firefox', 'googlechrome', 'unifying', 'adobereader', 'flashplayerplugin', 'jre8', 'javaruntime', 'zoom','notepadplusplus', 'intellijidea-ultimate', 'sql-server-management-studio', 'nodejs', 'postman', 'slack', 'git', 'mobaxterm', '7zip', 'office365proplus'
 
 $SimpleProgram = 'firefox', 'googlechrome', 'adobereader', 'flashplayerplugin', 'jre8', 'javaruntime', 'zoom','notepadplusplus', 'slack', '7zip', 'unifying', 'office365proplus'
@@ -14,8 +12,6 @@ Write-Host "Which Installation would you like to install?
 ";
 
 $choice = Read-Host "Please enter your choice";
-
-
 
 switch ($choice) {
 
