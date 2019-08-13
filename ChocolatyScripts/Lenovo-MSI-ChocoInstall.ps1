@@ -1,3 +1,13 @@
+#Self-Elevate to Administrator so that you dont have to set-executionpolicy to Remotesigned
+# if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) {
+#     if ([int](Get-CimInstance -Class Win32_OperatingSystem | Select-Object -ExpandProperty BuildNumber) -ge 6000) {
+#      $CommandLine = "-File `"" + $MyInvocation.MyCommand.Path + "`" " + $MyInvocation.UnboundArguments
+#      Start-Process -FilePath PowerShell.exe -Verb Runas -ArgumentList $CommandLine
+#      Exit
+#     }
+#    }
+
+
 $TechnicalPrograms = 'firefox', 'googlechrome', 'unifying', 'adobereader', 'flashplayerplugin', 'jre8', 'javaruntime', 'zoom','notepadplusplus', 'intellijidea-ultimate', 'sql-server-management-studio', 'nodejs', 'postman', 'slack', 'git', 'mobaxterm', '7zip', 'office365proplus'
 
 $SimpleProgram = 'firefox', 'googlechrome', 'adobereader', 'flashplayerplugin', 'jre8', 'javaruntime', 'zoom','notepadplusplus', 'slack', '7zip', 'unifying', 'office365proplus'
